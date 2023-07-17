@@ -27,7 +27,7 @@ const App = () => {
   const onSuccess = (position) => {
     const {latitude, longitude} = position.coords;
     const api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=93fe443621585819da0836b2667c0578`;
-    fetchData();
+    fetchData(api);
   }
 
 function onError(error){
@@ -36,6 +36,7 @@ function onError(error){
 
   function requestApi(city){
     const api = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=93fe443621585819da0836b2667c0578`;
+
     fetchData(api);
   }
 
